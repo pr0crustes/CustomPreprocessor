@@ -133,7 +133,7 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", type=str, help="The input .xm.e file.")
+    parser.add_argument("file", type=str, help="The input .prep file.")
     parser.add_argument("-o", type=str, help="[Optional] Destiny file.")
 
     args = parser.parse_args()
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     FILE = args.file
     OUT = args.o
 
-    file_ext = ".e"
+    file_ext = ".prep"
 
     OUT = OUT if OUT else FILE.replace(file_ext, "")
 

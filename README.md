@@ -7,12 +7,12 @@ CustomPreprocessor is a python script that parses and substitutes custom macros 
 The usage is simple, just call the script with python 3 in the following way:  
 
 ```
-python(3) CustomPreprocessor.py InputFile.e -o OutputFile 
+python(3) CustomPreprocessor.py InputFile.prep -o OutputFile 
 ```
 
-The output file is optional and, if not present, it will save as the input file minus the .e extension.  
+The output file is optional and, if not present, it will save as the input file minus the .prep extension.  
 
-The input file should have a .e extension.
+The input file should have a .prep extension.
 
 
 ## Syntax
@@ -107,7 +107,7 @@ For this to work, the '\' should be the last thing in the line.
   
 Keep in mind that the '$' should be at the start of a line. If there is a non space character before it, the instruction will not be evaluated.  
   
-This project includes an "example" folder, with a valid file with a ".e" file that can be parsed.  
+This project includes an "example" folder, with a valid file with a ".prep" file that can be parsed.  
   
-The required extension ".e" is to prevent the user to override files accidentally.  
+The required extension ".prep" is to prevent the user to override files accidentally.  
 The script can be easily modified to remove it.
