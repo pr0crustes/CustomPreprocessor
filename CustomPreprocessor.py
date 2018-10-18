@@ -4,6 +4,8 @@
 # This script is a simple preprocessor made by me, pr0crustes.
 # All Rights Reserved.
 #
+# Original at https://github.com/pr0crustes/CustomPreprocessor
+#
 
 
 PP_KEY = "$"
