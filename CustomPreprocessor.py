@@ -155,4 +155,4 @@ if __name__ == "__main__":
 
     Processor(FILE).preprocess_file(OUT)
 
-    print("==> CustomPreprocessor preprocessed the file.")
+    print("==> CustomPreprocessor preprocessed the file. Output at '" + OUT + "'.")
