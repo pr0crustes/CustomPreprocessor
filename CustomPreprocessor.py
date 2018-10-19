@@ -4,7 +4,7 @@
 # This script is a simple preprocessor made by me, pr0crustes.
 # All Rights Reserved.
 #
-# Version 1
+# Version 2
 # Original at https://github.com/pr0crustes/CustomPreprocessor
 #
 
