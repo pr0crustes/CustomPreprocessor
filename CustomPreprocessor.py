@@ -21,6 +21,8 @@ PP_CONTINUE_LINE = "\\"
 
 PP_NEW_LINE = "\n"
 
+PP_FILE_EXT = ".prep"
+
 
 # Returns the string between two substrings.
 def str_between(string, left, right):
@@ -139,19 +141,17 @@ if __name__ == "__main__":
         import argparse
 
         parser = argparse.ArgumentParser()
-        parser.add_argument("file", type=str, help="The input .prep file.")
-        parser.add_argument("-o", type=str, help="[Optional] Destiny file.")
+        parser.add_argument("file", type=str, help="The input " + PP_FILE_EXT + " file.")
+        parser.add_argument("-o", type=str, help="[Optional] Destiny file. If not provided, it will be the input file without the " + PP_FILE_EXT + " extension.")
         args = parser.parse_args()
         return args.file, args.o
 
     # FILE, OUT = "example/Test.prep", None  # For testing
     FILE, OUT = user_file()
 
-    file_ext = ".prep"
+    OUT = OUT if OUT else FILE.replace(PP_FILE_EXT, "")
 
-    OUT = OUT if OUT else FILE.replace(file_ext, "")
-
-    assert FILE.endswith(file_ext), "Input file should end with  " + file_ext
+    assert FILE.endswith(PP_FILE_EXT), "Input file should end with  " + PP_FILE_EXT
 
     Processor(FILE).preprocess_file(OUT)
 
